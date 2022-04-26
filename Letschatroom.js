@@ -1,16 +1,16 @@
 
 var firebaseConfig = {
-    apiKey: "AIzaSyAk0fXCQDEPy8C5NuhIhT7hDVcWPA5fJd0",
-    authDomain: "letschatwebapp-daa33.firebaseapp.com",
-    databaseURL: "https://letschatwebapp-daa33-default-rtdb.firebaseio.com",
-    projectId: "letschatwebapp-daa33",
-    storageBucket: "letschatwebapp-daa33.appspot.com",
-    messagingSenderId: "372784277943",
-    appId: "1:372784277943:web:bcb5740f04eddea1d3a032"
-  };
+  apiKey: "AIzaSyCVCcBz3-oKfcpFyZ8EV9tnFuATjKUT3bs",
+  authDomain: "letschatwebapp-de4a4.firebaseapp.com",
+  databaseURL: "https://letschatwebapp-de4a4-default-rtdb.firebaseio.com",
+  projectId: "letschatwebapp-de4a4",
+  storageBucket: "letschatwebapp-de4a4.appspot.com",
+  messagingSenderId: "656820569059",
+  appId: "1:656820569059:web:95f33bb5a09a5877c856d6"
+};
   
   // Initialize Firebase
-    firbase.initializeApp(firebaseConfig);
+    firebase.initializeApp(firebaseConfig);
     user_name=localStorage.getItem("user_name");
     document.getElementById("user_name").innerHTML="welcome " + user_name + "!";
     function addRoom() {
@@ -38,4 +38,10 @@ function redirectToRoomNam(name)
 {
 localStorage.setItem("room_name",name);
 window.location + "kwitter_page.html";
-}    
+} 
+function logout()  
+{
+localStorage.removeItem("user_name");
+localStorage.removeItem("room_name");
+window.location="index.html";
+}
